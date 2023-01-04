@@ -42,6 +42,17 @@ const AnimeCard = ({ animeData }) => {
                         image={item.images.jpg.image_url}
                         alt={item.title}
                       />
+                      <Typography component="div" sx={{
+                        position: "absolute",
+                        top: "0px",
+                        right: "0px",
+                        backgroundColor: "#FF35E3",
+                        color: "black",
+                        paddingLeft: "10px",
+                        paddingRight: "10px"
+                      }}>
+                        1
+                      </Typography>
                       <CardContent>
                         <Typography gutterBottom>
                           <p style={{ lineHeight: 1 }}>{item.title}</p>
