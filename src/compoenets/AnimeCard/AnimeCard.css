@@ -13,16 +13,30 @@
 }
 
 .card-Area {
-  border-radius: 16;
-  transition: "0.2s";
+  border-radius: 50%;
+  /* transition: "0.2s"; */
   height: 300px;
   width: 200px;
   margin: 0.5rem;
 }
 /* sx={{ width: "200px", height: "300px", margin: 1, borderRadius: 2 }} */
 
-.card-Area:hover {
+/* .card-Area:hover {
   transform: "scale(1.1)";
   height: 420px;
   width: 300px;
+} */
+
+.rank-tag {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #ff35e3;
+  border-radius: 0 3px 0 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 1.7rem;
+  width: 1.7rem;
+  display: flex;
+  justify-content: center;
 }

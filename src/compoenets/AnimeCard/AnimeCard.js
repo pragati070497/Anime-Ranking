@@ -11,7 +11,7 @@ import "./AnimeCard.css"
 
 const AnimeCard = ({ animeData }) => {
 
-  const [isCardHover, setIsMouseHover] = useState(false);
+  const [isCardHover, setIsCardHover] = useState(false);
 
   useEffect(() => {
     animeData.map(item => {
@@ -19,6 +19,8 @@ const AnimeCard = ({ animeData }) => {
 
     })
   }, [animeData])
+
+  console.log(isCardHover,"caredd");
 
   return (
     <div>
@@ -31,40 +33,51 @@ const AnimeCard = ({ animeData }) => {
               <Grid container>
                 <Grid item >
                   <CardActionArea >
-                    <Card className='card-Area' onMouseOver={() => {
-                      setIsMouseHover(true);
-                    }} onMouseLeave={() => {
-                      setIsMouseHover(false);
-                    }}>
+                    <Card className='card-Area'
+                      onMouseOver={() => {
+                        console.log("hover");
+                        setIsCardHover(true);
+                      }}
+                      onMouseLeave={() => {
+                        console.log("hover out");
+                        setIsCardHover(false);
+                      }}>
+                      <Typography className='rank-tag'
+                      // sx={{
+                      //   position: "absolute",
+                      //   top: "9px",
+                      //   right: "9px",
+                      //   backgroundColor: "#FF35E3",
+                      //   borderRadius:"16",
+                      //   color: "black",
+                      //   paddingLeft: "10px",
+                      //   paddingRight: "10px"
+                      // }}
+                      >
+                        {item.rank}
+                      </Typography>
                       <CardMedia
                         className='image-cover'
                         component="img"
                         image={item.images.jpg.image_url}
                         alt={item.title}
                       />
-                      <Typography component="div" sx={{
-                        position: "absolute",
-                        top: "0px",
-                        right: "0px",
-                        backgroundColor: "#FF35E3",
-                        color: "black",
-                        paddingLeft: "10px",
-                        paddingRight: "10px"
-                      }}>
-                        1
-                      </Typography>
+
                       <CardContent>
                         <Typography gutterBottom>
                           <p style={{ lineHeight: 1 }}>{item.title}</p>
                         </Typography>
+                        <Collapse in={isCardHover} timeout="auto" unmountOnExit>
+                          <Typography align='left' marginLeft={2}>
+                            <b>Release : </b>{item.aired.string}<br />
+                            <b>Lastest : </b>{item.aired.to ? Moment(item.aired.to).format('DD-MM-YYYY') : "Now"}<br />
+                            <b>Rating : </b>{item.rating}
+                          </Typography>
+                        </Collapse>
                       </CardContent>
-                      {/* <Collapse in={isCardHover} timeout="auto" > */}
-                      <Typography align='left' marginLeft={2}>
-                        <b>Release : </b>{item.aired.string}<br />
-                        <b>Lastest : </b>{item.aired.to ? Moment(item.aired.to).format('DD-MM-YYYY') : "Now"}<br />
-                        <b>Rating : </b>{item.rating}
-                      </Typography>
-                      {/* </Collapse> */}
+                      {/* <Collapse in={isCardHover} timeout="auto" unmountOnExit >
+                        <Typography >12</Typography>
+                      </Collapse> */}
                     </Card>
                   </CardActionArea>
                 </Grid>
