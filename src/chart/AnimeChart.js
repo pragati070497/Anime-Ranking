@@ -21,16 +21,16 @@ const AnimeChart = ({ chartData }) => {
             <AreaChart width={900} height={350} data={chartData}
                 margin={{ top: 60, right: 50, left: 80, bottom: 10 }}>
                 <defs>
-                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                        <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+                    <linearGradient id="colorPv" x1="1" y1="0" x2="0" y2="0">
+                        <stop offset="40%" stopColor="#8884d8" stopOpacity={1} />
+                        <stop offset="60%" stopColor="#82ca9d" stopOpacity={1} />
                     </linearGradient>
                 </defs>
                 <XAxis dataKey="year" />
                 <YAxis dataKey="count" />
                 <CartesianGrid horizontal={true} vertical={false} />
                 <Tooltip content={<CustomTooltip />} />
-                <Area type="monotone" dataKey="count" stroke="#8884d8" fillOpacity={0.5} fill="#43CBFF" />
+                <Area type="monotone" dataKey="count"  stroke="url(#colorPv)" fillOpacity={0.5} fill="url(#colorPv)" />
             </AreaChart>
         </>
     )

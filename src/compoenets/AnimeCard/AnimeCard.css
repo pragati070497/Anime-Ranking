@@ -3,22 +3,33 @@
   width: 100%;
 }
 
-.card-Area {
+.anime-card {
   border-radius: 15px !important;
   height: 300px;
   width: 200px;
 }
 
-.card-Area:hover {
+.anime-card:hover {
   /* transform: scale(1.05,1.05); */
   /* transform: translate(0%); */
   position: absolute;
   /* right: 1px; */
-  transition: 0.5s;
+  transition: 0.7s;
   z-index: 1;
   height: 420px;
   width: 300px;
 }
+
+.anime-card-release {
+  transition: 0.9s;
+}
+
+.anime-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  }
 
 .rank-tag {
   position: absolute;
