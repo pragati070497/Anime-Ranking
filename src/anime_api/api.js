@@ -4,7 +4,7 @@ import { BaseUrl } from "../api_constant";
 
 
 export default {
-    getAnime: () => {
+    getAnime: () =>
         axios.get(BaseUrl + "/top/anime", {
             headers: {
                 "Content-Type": "application/json",
@@ -13,5 +13,4 @@ export default {
             console.log("API ==>  get top anime ==> ", result);
             return result.data;
         })
-    }
 }

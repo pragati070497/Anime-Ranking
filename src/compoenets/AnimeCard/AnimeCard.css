@@ -2,41 +2,35 @@
   height: 250px;
   width: 100%;
 }
-/* Add a transition effect to the element */
-.floating-element {
-  transition: transform 0.2s;
-}
-
-/* When the user hovers over the element, move it slightly */
-.floating-element:hover {
-  transform: translateX(50%);
-}
 
 .card-Area {
-  border-radius: 50%;
-  /* transition: "0.2s"; */
+  border-radius: 15px !important;
   height: 300px;
   width: 200px;
-  margin: 0.5rem;
 }
-/* sx={{ width: "200px", height: "300px", margin: 1, borderRadius: 2 }} */
 
-/* .card-Area:hover {
-  transform: "scale(1.1)";
+.card-Area:hover {
+  /* transform: scale(1.05,1.05); */
+  /* transform: translate(0%); */
+  position: absolute;
+  /* right: 1px; */
+  transition: 0.5s;
+  z-index: 1;
   height: 420px;
   width: 300px;
-} */
+}
 
 .rank-tag {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 0px;
+  right: 0px;
   background-color: #ff35e3;
   border-radius: 0 3px 0 0;
   padding-left: 10px;
   padding-right: 10px;
-  height: 1.7rem;
-  width: 1.7rem;
+  height: 1.8rem;
+  width: 1.8rem;
   display: flex;
   justify-content: center;
+  border-radius: 0 10px 0 0;
 }
