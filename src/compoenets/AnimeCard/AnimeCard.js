@@ -18,9 +18,19 @@ const AnimeCard= ()=>{
           component="img"
           height="250"
           width="100%"
-          image="https://img.youtube.com/vi/27OZc-ku6is/maxresdefault.jpg"
+          image="https://cdn.myanimelist.net/images/anime/1208/94745l.jpg"
           alt="green iguana"
+         
         />
+        <Typography  component="div" sx={{  position: "absolute",
+  top: "0px",
+  right: "0px",
+  backgroundColor: "#FF35E3",
+  color: "black",
+  paddingLeft: "10px",
+  paddingRight:"10px" }}>
+            1
+          </Typography>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Lizard
@@ -28,6 +38,7 @@ const AnimeCard= ()=>{
           </CardContent>
         </CardActionArea>
         </Card>
+        
 
         
         
