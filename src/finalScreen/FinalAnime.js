@@ -17,7 +17,6 @@ const FinalAnime = () => {
         }).then((result) => {
             var data = result.data.data
             setAnimeData(data);
-            console.log("get top anime ==> ", result.data.data);
             var yearArr = [];
             data.map((item, idx) => {
                 if (item.year) yearArr.push(item.year)
@@ -52,7 +51,6 @@ const FinalAnime = () => {
                 count = 0;
                 titleArr = [];
             })
-            console.log(dataArr);
             setChartData(dataArr);
         })
     }, [])

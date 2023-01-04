@@ -20,19 +20,19 @@ const AnimeCard = ({ animeData }) => {
     })
   }, [animeData])
 
-  console.log(isCardHover,"caredd");
+  console.log(isCardHover, "caredd");
 
   return (
     <div>
       <h1> anime card</h1>
-      {animeData.map(item => {
-        if (item.rank <= 20) {
-          return (
-            <Container>
-              {/* <Box className='floating-element'> */}
-              <Grid container>
+      <Grid container margin={3}>
+        {animeData.map(item => {
+          if (item.rank <= 20) {
+            return (
+              <>
                 <Grid item >
-                  <CardActionArea >
+                  {/* <Box className='floating-element'> */}
+                  <CardActionArea>
                     <Card className='card-Area'
                       onMouseOver={() => {
                         console.log("hover");
@@ -80,14 +80,15 @@ const AnimeCard = ({ animeData }) => {
                       </Collapse> */}
                     </Card>
                   </CardActionArea>
+                  {/* </Box> */}
                 </Grid>
-              </Grid>
-              {/* </Box> */}
+              </>
+            )
+          }
+        })}
+      </Grid>
 
-            </Container >
-          )
-        }
-      })}
+
       {/* <Container maxWidth="lg">
         <Box sx={{ maxWidth: "lg", display: 'flex', flexWrap: 'wrap' }}>
           <Card sx={{ maxWidth: 200, height: 300, margin: 1, borderRadius: 2 }}>
