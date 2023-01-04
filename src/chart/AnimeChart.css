@@ -1,0 +1,8 @@
+.tooltip-box {
+  padding: 0.5rem;
+}
+
+.tooltip-title {
+    display: flex;
+    flex-direction: column;
+}
