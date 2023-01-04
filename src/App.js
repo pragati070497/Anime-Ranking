@@ -2,15 +2,15 @@
 import './App.css';
 import AnimeChart from './chart/AnimeChart';
 import AnimeCard from './compoenets/AnimeCard/AnimeCard';
-//import MuiCard from './compoenets/MuiCard';
+import FinalAnime from './finalScreen/FinalAnime';
 
 
 function App() {
   return (
     <div className="App">
-      <AnimeChart />
-   {/* //<MuiCard/> */}
-   <AnimeCard/>
+      <FinalAnime />
+      {/* <AnimeChart />
+      <AnimeCard /> */}
     </div>
   );
 }

@@ -1,0 +1,28 @@
+.image-cover {
+  height: 250px;
+  width: 100%;
+}
+/* Add a transition effect to the element */
+.floating-element {
+  transition: transform 0.2s;
+}
+
+/* When the user hovers over the element, move it slightly */
+.floating-element:hover {
+  transform: translateX(50%);
+}
+
+.card-Area {
+  border-radius: 16;
+  transition: "0.2s";
+  height: 300px;
+  width: 200px;
+  margin: 0.5rem;
+}
+/* sx={{ width: "200px", height: "300px", margin: 1, borderRadius: 2 }} */
+
+.card-Area:hover {
+  transform: "scale(1.1)";
+  height: 420px;
+  width: 300px;
+}
