@@ -1,8 +1,6 @@
 
 import './App.css';
-import AnimeChart from './chart/AnimeChart';
-import AnimeCard from './compoenets/AnimeCard/AnimeCard';
-import FinalAnime from './finalScreen/FinalAnime';
+import FinalAnime from './compoenets/finalScreen/FinalAnime';
 
 
 function App() {

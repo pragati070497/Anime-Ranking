@@ -1,10 +1,8 @@
-import AnimeChart from "../chart/AnimeChart";
-import AnimeCard from "../compoenets/AnimeCard/AnimeCard";
-import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { BaseUrl } from "../api_constant";
-import api from "../anime_api/api";
-import "./FinalAnime.css"
+import AnimeCard from '../AnimeCard/AnimeCard';
+import AnimeChart from '../chart/AnimeChart';
+import api from '../../anime_api/api';
+import "./FinalAnime.css";
 
 const FinalAnime = () => {
 

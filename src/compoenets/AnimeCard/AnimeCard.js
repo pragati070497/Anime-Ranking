@@ -2,7 +2,7 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, Collapse, Grid } from '@mui/material';
+import { CardActionArea, Grid } from '@mui/material';
 import Moment from 'moment';
 import "./AnimeCard.css"
 import { useState } from 'react';

@@ -10,8 +10,6 @@
 }
 
 .anime-card:hover {
-  /* transform: scale(1.05,1.05); */
-  /* transform: translate(0%); */
   position: absolute;
   /* right: 0.2rem; */
   /* left: 5px; */
@@ -36,7 +34,7 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  background-color: #ff35e3;
+  background-color: #f223d6f7;
   border-radius: 0 3px 0 0;
   padding-left: 10px;
   padding-right: 10px;
