@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../../anime_api/api";
 import "./FinalAnime.css";
 import AnimeChart from "../chart/AnimeChart";
-import AnimeCard from "../animeCard/AnimeCard";
+import AnimeCard from "../AnimeCard/AnimeCard";
 
 const FinalAnime = () => {
   const [chartData, setChartData] = useState([]);
