@@ -3,6 +3,8 @@ import AnimeCard from "../compoenets/AnimeCard/AnimeCard";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { BaseUrl } from "../api_constant";
+import api from "../anime_api/api";
+import "./FinalAnime.css"
 
 const FinalAnime = () => {
 
@@ -10,12 +12,8 @@ const FinalAnime = () => {
     const [animeData, setAnimeData] = useState([]);
 
     useEffect(() => {
-        axios.get(BaseUrl + "/top/anime", {
-            headers: {
-                "Content-Type": "application/json",
-            },
-        }).then((result) => {
-            var data = result.data.data
+        api.animeData.getAnime().then(result => {
+            var data = result.data
             setAnimeData(data);
             var yearArr = [];
             data.map((item, idx) => {
@@ -56,10 +54,10 @@ const FinalAnime = () => {
     }, [])
 
     return (
-        <>
+        <div className="anime-layout">
             <AnimeCard animeData={animeData} />
             <AnimeChart chartData={chartData} />
-        </>
+        </div>
     )
 }
 

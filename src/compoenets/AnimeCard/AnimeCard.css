@@ -13,7 +13,8 @@
   /* transform: scale(1.05,1.05); */
   /* transform: translate(0%); */
   position: absolute;
-  /* right: 1px; */
+  /* right: 0.2rem; */
+  /* left: 5px; */
   transition: 0.7s;
   z-index: 1;
   height: 420px;
