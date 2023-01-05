@@ -9,10 +9,13 @@
   width: 200px;
 }
 
+/* .anime-card:hover::after {
+  transition-delay: 4s;
+} */
+
 .anime-card:hover {
   position: absolute;
-  /* right: 0.2rem; */
-  /* left: 5px; */
+  left: -50px;
   transition: 0.7s;
   z-index: 1;
   height: 420px;
@@ -21,6 +24,13 @@
 
 .anime-card-release {
   transition: 0.9s;
+  opacity: 0;
+}
+
+.card-div {
+  position: relative;
+  height: 300px;
+  width: 200px;
 }
 
 .anime-title {
@@ -28,7 +38,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
-  }
+}
 
 .rank-tag {
   position: absolute;

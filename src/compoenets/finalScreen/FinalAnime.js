@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import AnimeCard from '../AnimeCard/AnimeCard';
+import AnimeCard from '../animeCard/AnimeCard';
 import AnimeChart from '../chart/AnimeChart';
 import api from '../../anime_api/api';
 import "./FinalAnime.css";
@@ -12,14 +12,18 @@ const FinalAnime = () => {
     useEffect(() => {
         api.animeData.getAnime().then(result => {
             var data = result.data
-            setAnimeData(data);
             var yearArr = [];
-            data.map((item, idx) => {
+            var cardList = [];
+
+            data.map(item => {
                 if (item.year) yearArr.push(item.year)
-            })
+                if (item.rank <= 20) cardList.push(item)
+            });
+            setAnimeData(cardList);
 
             var minYear = Math.min(...yearArr)
             var maxYear = Math.max(...yearArr);
+            
             yearArr = [];
             for (var i = minYear; i <= maxYear; i++) {
                 yearArr.push(i)
