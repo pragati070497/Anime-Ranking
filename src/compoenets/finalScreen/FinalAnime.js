@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import AnimeCard from '../animeCard/AnimeCard';
+import AnimeCard from '../AnimeCard/AnimeCard';
 import AnimeChart from '../chart/AnimeChart';
 import api from '../../anime_api/api';
 import "./FinalAnime.css";
