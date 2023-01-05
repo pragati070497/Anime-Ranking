@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
-import AnimeChart from './chart/AnimeChart';
+import FinalAnime from './compoenets/finalScreen/FinalAnime';
+
 
 function App() {
   return (
     <div className="App">
-      <AnimeChart />
+      <FinalAnime />
     </div>
   );
 }
