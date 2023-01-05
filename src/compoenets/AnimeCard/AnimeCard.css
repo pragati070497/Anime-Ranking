@@ -11,8 +11,8 @@
 
 .anime-card:hover {
   position: absolute;
-  /* right: 0.2rem; */
-  /* left: 5px; */
+  /* right: 0.1rem; */
+  /* left: 2px; */
   transition: 0.7s;
   z-index: 1;
   height: 420px;

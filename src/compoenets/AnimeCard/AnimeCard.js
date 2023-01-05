@@ -13,13 +13,19 @@ const AnimeCard = ({ animeData }) => {
 
   return (
     <>
-      <Grid container marginLeft={3} spacing={2} paddingTop={5}>
+      <Grid container
+        spacing={2}
+        padding={5}
+        sx={{
+          width: "auto",
+          marginLeft: "4rem",
+        }}>
         {animeData.map(item => {
-          if (item.rank <= 20) {
-            return (
-              <>
-                <Grid item spacing={2}>
-                  <CardActionArea>
+          return (
+            <>
+              <Grid item spacing={2}>
+                <CardActionArea>
+                  <div style={{ position: 'relative', height: "300px", width: "200px" }}>
                     <Card className={isReleaseClick ? "anime-card-release" : 'anime-card'}
                       onMouseOver={() => setIsReleaseClick(false)}>
                       <Typography className='rank-tag'>
@@ -47,11 +53,11 @@ const AnimeCard = ({ animeData }) => {
                         </Typography>
                       </CardContent>
                     </Card>
-                  </CardActionArea>
-                </Grid>
-              </>
-            )
-          }
+                  </div>
+                </CardActionArea>
+              </Grid>
+            </>
+          )
         })}
       </Grid>
     </>
