@@ -7,24 +7,24 @@
   border-radius: 15px !important;
   height: 300px;
   width: 200px;
+  transition: width 15s;
 }
-
-/* .anime-card:hover::after {
-  transition-delay: 4s;
-} */
 
 .anime-card:hover {
   position: absolute;
   left: -50px;
-  transition: 0.7s;
-  z-index: 1;
   height: 420px;
   width: 300px;
+  transition: 0.7s;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .anime-card-release {
-  transition: 0.9s;
-  opacity: 0;
+  height: 300px;
+  width: 200px;
+  transition: width 15s;
 }
 
 .card-div {
