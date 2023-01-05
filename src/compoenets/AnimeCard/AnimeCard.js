@@ -50,7 +50,6 @@ const AnimeCard = ({ animeData }) => {
                         <Typography align="left" marginLeft={2}>
                           <small
                             onClick={() => {
-                              console.log("click");
                               setIsReleaseClick(true);
                             }}
                           >

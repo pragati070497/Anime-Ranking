@@ -1,7 +1,5 @@
-
-import './App.css';
-import FinalAnime from './compoenets/finalScreen/FinalAnime';
-
+import "./App.css";
+import FinalAnime from "./compoenets/finalScreen/FinalAnime";
 
 function App() {
   return (
@@ -12,8 +10,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
