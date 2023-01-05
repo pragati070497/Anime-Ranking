@@ -18,7 +18,7 @@ const AnimeCard = ({ animeData }) => {
         padding={5}
         sx={{
           width: "auto",
-          marginLeft: "4%",
+          marginLeft: "6%",
         }}
       >
         {animeData.map((item) => {
